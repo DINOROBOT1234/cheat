@@ -20,35 +20,4 @@ return 0;<br>
 }
 <br>
 </h3>
-  <button onclick="copy()">Kopieren</button>
-<script>
-function copy() {
-  // Get the text field
-  var copy1 = document.getElementById("v-init");
-  var copy2 = document.getElementById("n-init");
-
-  // Select the text field
-  copy = "#include "evclibrary.h"\nint main()\n{\n"  + copy1.select() + "EVC_INIT();\n" + copy2.select() + "EVC_CLOSE();\nreturn 0\n}"
-  
-#include "evclibrary.h"
-
-int main()
-{
-
-EVC_INIT();
-
-EVC_CLOSE();
-return 0;
-}
-  
-  
-  copy.setSelectionRange(0, 99999); // For mobile devices
-
-  // Copy the text inside the text field
-  navigator.clipboard.writeText(copy.value);
-  
-  // Alert the copied text
-  alert("Kopiert: " + copy.value);
-}
-</script>
 </html>
